@@ -38,7 +38,7 @@ body {
 }
 
 .animate-morph {
-  animation: morph 4s ease-in-out infinite alternate;
+  animation: morph 8s ease-in-out infinite alternate;
 }
 
 @keyframes float {
@@ -56,3 +56,4 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+

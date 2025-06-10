@@ -11,7 +11,7 @@ export default function Socials() {
       {/* Desktop sidebar - left side */}
       <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
         <div className="flex flex-col space-y-6 items-center">
-          <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#A8E524] to-transparent"></div>
+          <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#FF014F] to-transparent"></div>
 
           {socialLinks.map((link, index) => (
             <a
@@ -19,7 +19,7 @@ export default function Socials() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-black border border-gray-800 rounded-lg text-gray-400 hover:text-[#A8E524] hover:border-[#A8E524]/30 transition-all duration-300 group"
+              className="p-3 bg-black border border-gray-800 rounded-lg text-gray-400 hover:text-[#FF014F] hover:border-[#FF014F]/30 transition-all duration-300 group"
               aria-label={link.name}
             >
               {link.icon === "github" && (
@@ -91,14 +91,14 @@ export default function Socials() {
             </a>
           ))}
 
-          <div className="w-px h-20 bg-gradient-to-b from-[#A8E524] via-transparent to-transparent"></div>
+          <div className="w-px h-20 bg-gradient-to-b from-[#FF014F] via-transparent to-transparent"></div>
         </div>
       </div>
 
       {/* Mobile bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-black border-t border-gray-800 px-4 py-3">
         <div className="flex justify-center items-center space-x-6">
-          <div className="h-8 w-px bg-gradient-to-r from-transparent via-[#A8E524] to-transparent"></div>
+          <div className="h-8 w-px bg-gradient-to-r from-transparent via-[#FF014F] to-transparent"></div>
 
           {socialLinks.map((link, index) => (
             <a
@@ -106,7 +106,7 @@ export default function Socials() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-black border border-gray-800 rounded-lg text-gray-400 hover:text-[#A8E524] hover:border-[#A8E524]/30 transition-all duration-300 group"
+              className="p-2 bg-black border border-gray-800 rounded-lg text-gray-400 hover:text-[#FF014F] hover:border-[#FF014F]/30 transition-all duration-300 group"
               aria-label={link.name}
             >
               {link.icon === "github" && (
@@ -178,7 +178,7 @@ export default function Socials() {
             </a>
           ))}
 
-          <div className="h-8 w-px bg-gradient-to-r from-[#A8E524] via-transparent to-transparent"></div>
+          <div className="h-8 w-px bg-gradient-to-r from-[#FF014F] via-transparent to-transparent"></div>
         </div>
       </div>
     </>

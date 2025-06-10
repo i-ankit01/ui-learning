@@ -12,16 +12,23 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import { HeroSection } from "./HeroSection";
+import SkillsSection from "./SkillsSection";
+import Projects from "./Projects";
+import Footer from "./Footer";
 
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Home",
+      link: "#home",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Projects",
+      link: "#projects",
     },
     {
       name: "Contact",
@@ -88,7 +95,9 @@ export function NavbarDemo() {
         </MobileNav>
       </Navbar>
       <HeroSection/>
-
+      <SkillsSection/>
+      <Projects/>
+      <Footer/>
       {/* Navbar */}
     </div>
   );
