@@ -1,9 +1,9 @@
 export default function Socials() {
   const socialLinks = [
-    { icon: "github", url: "https://github.com/yourusername", name: "GitHub" },
-    { icon: "linkedin", url: "https://linkedin.com/in/yourusername", name: "LinkedIn" },
-    { icon: "twitter", url: "https://twitter.com/yourusername", name: "Twitter" },
-    { icon: "code", url: "https://leetcode.com/yourusername", name: "LeetCode" },
+    { icon: "github", url: "https://github.com/i-ankit01", name: "GitHub" },
+    { icon: "linkedin", url: "https://linkedin.com/in/i-ankit01", name: "LinkedIn" },
+    { icon: "twitter", url: "https://x.com/ankit_codes_", name: "Twitter" },
+    { icon: "code", url: "https://leetcode.com/ankitxkumar", name: "LeetCode" },
   ]
 
   return (

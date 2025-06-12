@@ -2,9 +2,11 @@ import { cn } from "@/lib/utils";
 import { HeroSection } from "@/components/HeroSection";
 import { NavbarDemo } from "@/components/NavbarDemo";
 import Socials from "@/components/Socials";
+import CursorLight from "@/components/CursorLight";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black">
+      <CursorLight/>
       <div className="fixed flex h-[50rem]  w-full items-center justify-center bg-white dark:bg-black">
         <div
           className={cn(

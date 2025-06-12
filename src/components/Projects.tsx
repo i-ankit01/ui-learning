@@ -2,18 +2,18 @@
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "FarmHelp AI",
       description: "A full-featured e-commerce platform with product management and payment integration.",
       image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["React", "Tailwind", "MongoDB" , "Express", "Python", "Gemini"],
       github: "https://github.com/yourusername/ecommerce",
       live: "https://ecommerce-demo.vercel.app",
     },
     {
-      title: "Task Management App",
+      title: "Space Walk",
       description: "A collaborative task management application with real-time updates.",
       image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Firebase", "Tailwind"],
+      technologies: ["React", "Tailwind", "Solarinet API"],
       github: "https://github.com/yourusername/taskmanager",
       live: "https://taskmanager-demo.vercel.app",
     },

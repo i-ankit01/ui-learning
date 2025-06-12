@@ -15,6 +15,7 @@ import { HeroSection } from "./HeroSection";
 import SkillsSection from "./SkillsSection";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import ExperienceSection from "./ExperienceSection";
 
 export function NavbarDemo() {
   const navItems = [
@@ -81,21 +82,16 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Login
+                My Resume
               </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
+             
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
       <HeroSection/>
       <SkillsSection/>
+      <ExperienceSection/>
       <Projects/>
       <Footer/>
       {/* Navbar */}

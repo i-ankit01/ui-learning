@@ -33,11 +33,12 @@ const IconCloudDemo = () => {
     "jupyter",
     "npm",
     "redux",
+    "render",
     "gnubash",
   ];
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden ">
+    <div className="relative flex md:h-full md:w-full items-center justify-center overflow-hidden ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );
