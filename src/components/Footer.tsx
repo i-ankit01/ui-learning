@@ -9,7 +9,7 @@ export default function Footer() {
 
           <div className="flex flex-col items-center md:items-end">
             <h3 className="text-xl font-semibold mb-4">Contact Me</h3>
-            <div className="text-gray-400 mb-2 hover:text-[#FF014F] transition-colors flex items-center">
+            <div className="text-gray-400 mb-2 hover:text-[#FF014F] cursor-pointer transition-colors flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 mr-2"
@@ -26,7 +26,7 @@ export default function Footer() {
               </svg>
               ankit.common.acc@gmail.com
             </div>
-            <div className="text-gray-400 hover:text-[#FF014F] transition-colors flex items-center">
+            <div className="text-gray-400 hover:text-[#FF014F] cursor-pointer transition-colors flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 mr-2"

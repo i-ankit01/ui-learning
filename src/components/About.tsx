@@ -18,7 +18,6 @@ export default function About({text}:any){
       {/* Background glow effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#FF014F]/5 via-[#FF014F]/10 to-[#FF014F]/5 rounded-2xl blur-xl" />
 
-      {/* Main content */}
       <div className="relative">
         {/* Animated border */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF014F]/30 to-transparent h-px top-0" />
@@ -30,7 +29,7 @@ export default function About({text}:any){
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {words.map((word, index) => (
+          {words.map((word : any, index : any) => (
             <motion.span
               key={index}
               className={`inline-block mr-1 ${
