@@ -2,8 +2,15 @@
 import IconCloudDemo from "@/components/IconCloudDemo";
 import { Button } from "@/components/ui/moving-border";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function SkillsSection() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.01,
+    rootMargin: "-150px 0px",
+  });
   const isMediumScreen = useMediaQuery("(min-width: 768px)");
   const skillCategories = [
     {
@@ -32,7 +39,13 @@ export default function SkillsSection() {
   return (
     <section id="about" className="py-10 px-4 md:ml-17 md:mt-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">
             My <span className="text-[#FF014F]">Skills</span>
           </h2>
@@ -41,9 +54,15 @@ export default function SkillsSection() {
             I specialize in a range of technologies across the full stack
             development spectrum. Here's a breakdown of my technical expertise.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
           {skillCategories.map((category, index) => (
             <div
               key={index}
@@ -75,7 +94,7 @@ export default function SkillsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="mt-7">
           <IconCloudDemo />

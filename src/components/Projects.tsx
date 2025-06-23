@@ -1,17 +1,29 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Projects() {
+  const { ref, inView } = useInView({ triggerOnce: true });
   const projects = [
     {
       title: "FarmHelp AI",
-      description: "A full-featured e-commerce platform with product management and payment integration.",
+      description:
+        "A full-featured e-commerce platform with product management and payment integration.",
       image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Tailwind", "MongoDB" , "Express", "Python", "Gemini"],
+      technologies: [
+        "React",
+        "Tailwind",
+        "MongoDB",
+        "Express",
+        "Python",
+        "Gemini",
+      ],
       github: "https://github.com/yourusername/ecommerce",
       live: "https://ecommerce-demo.vercel.app",
     },
     {
       title: "Space Walk",
-      description: "A collaborative task management application with real-time updates.",
+      description:
+        "A collaborative task management application with real-time updates.",
       image: "/placeholder.svg?height=200&width=300",
       technologies: ["React", "Tailwind", "Solarinet API"],
       github: "https://github.com/yourusername/taskmanager",
@@ -19,7 +31,8 @@ export default function Projects() {
     },
     {
       title: "Weather Dashboard",
-      description: "A weather dashboard that displays current and forecasted weather data.",
+      description:
+        "A weather dashboard that displays current and forecasted weather data.",
       image: "/placeholder.svg?height=200&width=300",
       technologies: ["JavaScript", "Weather API"],
       github: "https://github.com/yourusername/weather",
@@ -27,7 +40,8 @@ export default function Projects() {
     },
     {
       title: "Portfolio Website",
-      description: "A personal portfolio website showcasing projects and skills.",
+      description:
+        "A personal portfolio website showcasing projects and skills.",
       image: "/placeholder.svg?height=200&width=300",
       technologies: ["Next.js", "Tailwind CSS"],
       github: "https://github.com/yourusername/portfolio",
@@ -35,7 +49,8 @@ export default function Projects() {
     },
     {
       title: "Blog Platform",
-      description: "A content management system for creating and managing blog posts.",
+      description:
+        "A content management system for creating and managing blog posts.",
       image: "/placeholder.svg?height=200&width=300",
       technologies: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/yourusername/blog",
@@ -43,7 +58,8 @@ export default function Projects() {
     },
     {
       title: "Chat Application",
-      description: "Real-time chat application with private and group messaging.",
+      description:
+        "Real-time chat application with private and group messaging.",
       image: "/placeholder.svg?height=200&width=300",
       technologies: ["React", "Socket.io", "Express"],
       github: "https://github.com/yourusername/chat",
@@ -65,23 +81,35 @@ export default function Projects() {
       github: "https://github.com/yourusername/fitness",
       live: "https://fitness-demo.vercel.app",
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-10 px-4 md:ml-17 ">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">
             My <span className="text-[#FF014F]">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-[#FF014F] mx-auto mb-8"></div>
           <p className="text-zinc-300 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each project is built with a focus on performance, user experience, and
-            clean code.
+            Here are some of my recent projects. Each project is built with a
+            focus on performance, user experience, and clean code.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+        >
           {projects.map((project, index) => (
             <div
               key={index}
@@ -135,11 +163,18 @@ export default function Projects() {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold mb-1 text-[#FF014F]">{project.title}</h3>
-                <p className="text-zinc-300 text-sm mb-3 line-clamp-2">{project.description}</p>
+                <h3 className="text-lg font-bold mb-1 text-[#FF014F]">
+                  {project.title}
+                </h3>
+                <p className="text-zinc-300 text-sm mb-3 line-clamp-2">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-1">
                   {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-2 py-1 bg-black text-xs text-[#FF014F] rounded-md">
+                    <span
+                      key={techIndex}
+                      className="px-2 py-1 bg-black text-xs text-[#FF014F] rounded-md"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -147,8 +182,8 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }

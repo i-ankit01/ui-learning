@@ -1,10 +1,23 @@
 import cxi from "@/assets/cxi.jpeg";
 import scit from "@/assets/scit.jpeg";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function ExperienceSection() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    rootMargin: "-150px 0px",
+  });
+
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6 }}
+    >
       <div className="text-center mb-16 mt-16">
         <h2 className="text-4xl font-bold mb-4">
           Work <span className="text-[#FF014F]">Experience</span>
@@ -69,6 +82,6 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
