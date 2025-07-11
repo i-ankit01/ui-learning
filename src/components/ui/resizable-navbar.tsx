@@ -7,7 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-
+import AKLogo from "../../assets/AKLogo.jpeg"
 import React, { useRef, useState } from "react";
 
 
@@ -237,10 +237,11 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
+        src= {AKLogo.src}
         alt="logo"
         width={30}
         height={30}
+        className="rounded-lg"
       />
       <span className="font-bold text-xl hover:text-[#FF014F] text-black dark:text-white">Ankit Kumar</span>
     </a>
