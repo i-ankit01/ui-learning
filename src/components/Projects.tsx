@@ -84,7 +84,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-10 px-4 md:ml-17 ">
+    <section id="projects" className="py-10 px-4 md:ml-17 md:mt-5 ">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

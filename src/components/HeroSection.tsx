@@ -58,7 +58,7 @@ export function HeroSection() {
           <div className=" flex justify-center items-center px-4">
             <motion.div
               
-              className="md:text-4xl text-2xl font-normal text-neutral-600 dark:text-neutral-300"
+              className="md:text-4xl text-2xl font-normal text-neutral-600 dark:text-neutral-300 md:block hidden"
             >
               <FlipWords words={words} /> <br />
             </motion.div>

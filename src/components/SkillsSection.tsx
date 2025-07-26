@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/moving-border";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SkillsMarquee from "./SkillsMarquee";
 
 export default function SkillsSection() {
   const { ref, inView } = useInView({
@@ -44,7 +45,7 @@ export default function SkillsSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-4xl font-bold mb-4">
             My <span className="text-[#FF014F]">Skills</span>
@@ -56,46 +57,18 @@ export default function SkillsSection() {
           </p>
         </motion.div>
 
+       
+
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="text-center mb-16"
         >
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 rounded-lg p-6 border border-[#FF014F]/30 hover:border-[#FF014F]/30 shadow-md hover:shadow-lg hover:scale-103 cursor-pointer shadow-[#FF014F] transition-all duration-300"
-            >
-              <h3 className="text-xl font-bold text-center mb-6 text-[#FF014F]">
-                {category.name}
-              </h3>
-
-              <div className="grid grid-cols-2 md:ml-10 gap-3">
-                {category.skills.map((skill, skillIndex) =>
-                  isMediumScreen ? (
-                    <Button
-                      key={skillIndex}
-                      borderRadius="1.75rem"
-                      className="px-3 py-2 bg-black border border-[#FF014F]/30 cursor-pointer rounded-lg text-center hover:border-[#FF014F]/30 hover:text-[#FF014F] transition-colors duration-300"
-                    >
-                      {skill}
-                    </Button>
-                  ) : (
-                    <div
-                      key={skillIndex}
-                      className="px-3 py-2 bg-black border border-[#FF014F]/30 cursor-pointer rounded-lg text-center hover:border-[#FF014F]/30 hover:text-[#FF014F] transition-colors duration-300"
-                    >
-                      {skill}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          ))}
+          <SkillsMarquee/>
         </motion.div>
-
+        
         <div className="mt-7">
           <IconCloudDemo />
         </div>

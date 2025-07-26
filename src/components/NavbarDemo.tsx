@@ -91,7 +91,6 @@ export function NavbarDemo() {
       </Navbar>
       <HeroSection/>
       <SkillsSection/>
-      <ExperienceSection/>
       <Projects/>
       <Footer/>
       {/* Navbar */}
