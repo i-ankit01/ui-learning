@@ -67,20 +67,6 @@ export default function About({text}:any){
               {word}
             </motion.span>
           ))}
-
-          {/* Accent dots */}
-          <motion.span
-            className="inline-block ml-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 0.5 }}
-          >
-            <span className="inline-flex space-x-1">
-              <span className="w-1 h-1 bg-[#FF014F] rounded-full animate-pulse" />
-              <span className="w-1 h-1 bg-[#FF014F]/70 rounded-full animate-pulse" style={{ animationDelay: "0.2s" }} />
-              <span className="w-1 h-1 bg-[#FF014F]/50 rounded-full animate-pulse" style={{ animationDelay: "0.4s" }} />
-            </span>
-          </motion.span>
         </motion.p>
 
         {/* Side accent lines */}
