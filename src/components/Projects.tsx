@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import farmhelp from "../assets/farm-help.webp";
 import spacewalk from "../assets/space-walk.webp";
+import autowrite from "../assets/autowrite.webp";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +12,7 @@ export default function Projects() {
     {
       title: "FarmHelp AI",
       description:
-        "A full-featured e-commerce platform with product management and payment integration.",
+        "A direct marketplace for the agriculture helping both farmers and companies streamline their product exchange and transactions.",
       image: farmhelp,
       technologies: [
         "React",
@@ -21,69 +22,26 @@ export default function Projects() {
         "Python",
         "Gemini",
       ],
-      github: "https://github.com/yourusername/ecommerce",
+      github: "https://github.com/i-ankit01/FarmHelp",
       live: "https://ecommerce-demo.vercel.app",
+    },
+    {
+      title: "AutoWrite",
+      description:
+        "A pre prompted AI tool to effectively generate contents like email description, startup pitch etc.",
+      image: autowrite,
+      technologies: ["Next.js", "Toast Editor", "Gemini API", "Shadcn UI"],
+      github: "https://github.com/i-ankit01/AutoWrite",
+      live: "https://weather-demo.vercel.app",
     },
     {
       title: "Space Walk",
       description:
-        "A collaborative task management application with real-time updates.",
+        "A space book leveraging exploration of different celestial bodies in a structured manner.",
       image: spacewalk,
       technologies: ["React", "Tailwind", "Solarinet API"],
-      github: "https://github.com/yourusername/taskmanager",
+      github: "https://github.com/i-ankit01/space-walk",
       live: "https://taskmanager-demo.vercel.app",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A weather dashboard that displays current and forecasted weather data.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["JavaScript", "Weather API"],
-      github: "https://github.com/yourusername/weather",
-      live: "https://weather-demo.vercel.app",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A personal portfolio website showcasing projects and skills.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Next.js", "Tailwind CSS"],
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://portfolio-demo.vercel.app",
-    },
-    {
-      title: "Blog Platform",
-      description:
-        "A content management system for creating and managing blog posts.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/yourusername/blog",
-      live: "https://blog-demo.vercel.app",
-    },
-    {
-      title: "Chat Application",
-      description:
-        "Real-time chat application with private and group messaging.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Socket.io", "Express"],
-      github: "https://github.com/yourusername/chat",
-      live: "https://chat-demo.vercel.app",
-    },
-    {
-      title: "Movie Database",
-      description: "Search and browse movies with details and user reviews.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "TMDB API", "CSS"],
-      github: "https://github.com/yourusername/movies",
-      live: "https://movies-demo.vercel.app",
-    },
-    {
-      title: "Fitness Tracker",
-      description: "Track workouts, nutrition, and fitness progress over time.",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "Chart.js", "Firebase"],
-      github: "https://github.com/yourusername/fitness",
-      live: "https://fitness-demo.vercel.app",
     },
   ];
 

@@ -9,33 +9,9 @@ import SkillsMarquee from "./SkillsMarquee";
 export default function SkillsSection() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.01,
-    rootMargin: "-150px 0px",
+    threshold: 0.25,
+    rootMargin: "0px",
   });
-  const isMediumScreen = useMediaQuery("(min-width: 768px)");
-  const skillCategories = [
-    {
-      name: "Frontend",
-      skills: [
-        "React",
-        "Next.js",
-        "JavaScript",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "Tailwind",
-        "Redux",
-      ],
-    },
-    {
-      name: "Backend",
-      skills: ["Node.js", "Express", "MongoDB", "REST API", "PostgreSQL"],
-    },
-    {
-      name: "Languages & Tools",
-      skills: ["Java", "Python", "C", "Postman", "Git", "Docker", "VS Code"],
-    },
-  ];
 
   return (
     <section id="about" className="py-10 px-4 md:ml-17 md:mt-20">

@@ -5,15 +5,12 @@ import { useInView } from "react-intersection-observer";
 import Ankit from "../assets/ankit-profile.webp";
 import About from "./About";
 import Image from "next/image";
+import { FileText } from "lucide-react";
 
 export function HeroSection() {
   const { ref, inView } = useInView({ triggerOnce: true });
 
-  const words = [
-    "Full Stack Developer",
-    "Problem Solver",
-    "AI/ML Enthusiast",
-  ];
+  const words = ["Full Stack Developer", "Problem Solver", "AI/ML Enthusiast"];
 
   return (
     <div className="p-4 relative z-10 w-full text-center">
@@ -70,6 +67,10 @@ export function HeroSection() {
               }
             />
           </div>
+          <a href="https://drive.google.com/file/d/1-PexXdHjdOk_4Qt4UPPSh1ydH5sARDKL/view?usp=drivesdk" target="_blank" download={true} className="md:hidden w-40 flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 text-white border border-[#FF014F] px-3 py-1 ml-21 mt-5 mb-1 rounded-lg ">
+            <FileText className="h-5 w-5" />
+            My Resume
+          </a>
         </motion.div>
       </div>
     </div>

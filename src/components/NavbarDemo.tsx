@@ -48,7 +48,13 @@ export function NavbarDemo() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <NavbarButton variant="primary">My Resume</NavbarButton>
+            <NavbarButton
+              target="_blank"
+              href="https://drive.google.com/file/d/1-PexXdHjdOk_4Qt4UPPSh1ydH5sARDKL/view?usp=drivesdk"
+              variant="primary"
+            >
+              My Resume
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -78,29 +84,27 @@ export function NavbarDemo() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
+                target="_blank"
+                href="https://drive.google.com/file/d/1-PexXdHjdOk_4Qt4UPPSh1ydH5sARDKL/view?usp=drivesdk"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
               >
                 My Resume
               </NavbarButton>
-             
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-      <HeroSection/>
-      <SkillsSection/>
-      <Projects/>
-      <Footer/>
+      <HeroSection />
+      <SkillsSection />
+      <Projects />
+      <Footer />
       {/* Navbar */}
     </div>
   );
 }
 
 const DummyContent = () => {
-  return (
-    <>
-    </>
-  );
+  return <></>;
 };
