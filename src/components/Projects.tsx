@@ -23,7 +23,7 @@ export default function Projects() {
         "Gemini",
       ],
       github: "https://github.com/i-ankit01/FarmHelp",
-      live: "https://ecommerce-demo.vercel.app",
+      live: "https://farm-help-eight.vercel.app/",
     },
     {
       title: "AutoWrite",
@@ -41,7 +41,7 @@ export default function Projects() {
       image: spacewalk,
       technologies: ["React", "Tailwind", "Solarinet API"],
       github: "https://github.com/i-ankit01/space-walk",
-      live: "https://taskmanager-demo.vercel.app",
+      live: "https://space-walk-blond.vercel.app/",
     },
   ];
 
