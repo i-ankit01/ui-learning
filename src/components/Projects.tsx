@@ -32,7 +32,7 @@ export default function Projects() {
       image: autowrite,
       technologies: ["Next.js", "Toast Editor", "Gemini API", "Shadcn UI"],
       github: "https://github.com/i-ankit01/AutoWrite",
-      live: "https://weather-demo.vercel.app",
+      live: "https://autowritepp.vercel.app",
     },
     {
       title: "Space Walk",
