@@ -35,12 +35,12 @@ export function HeroSection() {
             </div>
 
             {/* Badges */}
-            <div className=" bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 text-black dark:text-white border-[#FF014F] dark:border-[#FF014F] absolute -top-5 -right-5 text-white px-3 py-1 rounded-full text-sm border ">
-              Developer
+            <div className=" bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 text-black dark:text-white border-[#FF014F] dark:border-[#FF014F] absolute -top-5 -right-5 text-white px-3 py-1 tracking-wide rounded-full text-sm border ">
+              Explorer
             </div>
 
-            <div className="bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 text-black dark:text-white border-[#FF014F] dark:border-[#FF014F] absolute -bottom-3 -left-3 bg-black text-white px-3 py-1 rounded-full text-sm border">
-              Designer
+            <div className="bg-gradient-to-r from-[#FF014F]/7 to-[#FF014F]/15 text-black dark:text-white border-[#FF014F] dark:border-[#FF014F] absolute -bottom-3 -left-3 bg-black text-white px-3 py-1 tracking-wide rounded-full text-sm border">
+              Learner
             </div>
           </motion.div>
         </div>
